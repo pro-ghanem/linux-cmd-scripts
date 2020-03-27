@@ -1,0 +1,41 @@
+way 1 :
+#crontab -e
+@reboot  /home/user/test.sh
+------------------------------------------------
+way : 2 
+
+A simple approach is to add a line in /etc/rc.local :
+
+/PATH/TO/MY_APP &
+or if you want to run the command as a special user :
+
+su - USER_FOOBAR -c /PATH/TO/MY_APP &
+(the trailing ampersand backgrounds the process and allows the rc.local to continue executing)
+
+If you want a full init script, debian distro have a template file, so :
+
+cp /etc/init.d/skeleton /etc/init.d/your_app
+and adapt it a bit.
+
+-----------------------------------------------------
+
+way 2 : 
+In the file you put in /etc/init.d/ you have to set it executable with:
+
+chmod +x /etc/init.d/start_my_app
+Thanks to @meetamit, if this does not run you have to create a symlink to /etc/rc.d/
+
+ln -s /etc/init.d/start_my_app /etc/rc.d/
+Please note that on latest Debian, this will not work as your script have to be LSB compliant (provide, at least, the following actions: start, stop, restart, force-reload, and status): https://wiki.debian.org/LSBInitScripts
+
+As a note, you should put the absolute path of your script instead of a relative one, it may solves unexpected issues:
+
+/var/myscripts/start_my_app
+And don't forget to add on top of that file:
+
+#!/bin/sh
+----------------------------------------------------------------------
+way 3 : 
+2
+
+This simple solution worked for me on an Amazon Linux instance running CentOS. Edit your /etc/rc.d/rc.local file and put the command there. It is mentioned in this file that it will be executed after all other init scripts. So be careful in that regards. This is how the file looks for me currently.enter image description here. Last line is the name of my script.
