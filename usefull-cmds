@@ -1,0 +1,6 @@
+>>> the diff between df -h , du -h 
+
+- The du command is very useful to track down disk space hogs. It is useful to find out the names of directories and files that consume large amounts of space on a disk. The basic syntax is:
+du
+du /path/do/dir
+- df -h    : for the disk          which du : for specific directory
