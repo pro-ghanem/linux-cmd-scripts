@@ -4,10 +4,18 @@
 du
 du /path/do/dir
 - df -h    : for the disk          which du : for specific directory
-
->>> what is the diff between the grep and awk
+---------------------------------------------------------
+>>> what is the diff between the grep and awk, sed
 - grep: search for specific terms in a file
 #usage
 $ grep This file.txt
+
 - awk and sed are text processors. Not only do they have the ability to find what you are looking for in text, they have the ability to remove, add and modify the text as well (and much more).
 awk is mostly used for data extraction and reporting
+$ sed -i 's/cat/dog/' file.txt
+# this will replace any occurrence of the characters 'cat' by 'dog'
+----------------------------------------------------------------
+to show resources :
+top  ,mstat for processor, iostat for hard
+to kill process:
+kill -9 <pid> , pkill -9 <process-name>
