@@ -84,3 +84,4 @@ iptables -t filter -A OUTPUT -d 192.168.1.123 -j DROP
 ---------------------------------------------------------------------------------
 firewalld is an enhancement or new version of firewall from netfikter projects
 
+
