@@ -19,3 +19,9 @@ to show resources :
 top  ,mstat for processor, iostat for hard
 to kill process:
 kill -9 <pid> , pkill -9 <process-name>
+---------------------------------- wach command -----------------------------
+>> syntax : watch -n 1 script.sh     >> n=time in sec means runs this command every 1 sec may use for 
+>> to watch the memory usages for real live: watch free -m
+>> to watch the the coping file 
+# cp ubuntu-15.10-desktop-amd64.iso /home/tecmint/ &
+# watch -n 0.1 du -s /home/tecmint/ubuntu-15.10-desktop-amd64.iso 
