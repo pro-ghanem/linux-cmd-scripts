@@ -25,3 +25,7 @@ kill -9 <pid> , pkill -9 <process-name>
 >> to watch the the coping file 
 # cp ubuntu-15.10-desktop-amd64.iso /home/tecmint/ &
 # watch -n 0.1 du -s /home/tecmint/ubuntu-15.10-desktop-amd64.iso 
+---------------------------------------
+>>> Network : 
+- netstat : to show network statistics and route table >> #netstat -l to show all statistics , -r to show route table
+
