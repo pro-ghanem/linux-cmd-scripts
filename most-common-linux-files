@@ -1,0 +1,6 @@
+>>> nginx:
+ - /var/www/html/  >> document root 
+ - /etc/nginx/nginx.conf   >> nginx configration file
+ - /etc/nginx/sites-available/default   >> allow u To Set Up Nginx Server Blocks for example
+ if u need change to https instade of http ,index name and root dir
+ - 
