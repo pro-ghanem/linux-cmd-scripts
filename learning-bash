@@ -29,7 +29,7 @@ NAME="Bob"
 # USER INPUT
 # read -p "Enter your name: " NAME
 # echo "Hello $NAME, nice to meet you!"
-
+## to know more option of conditions: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
 # SIMPLE IF STATEMENT
 # if [ "$NAME" == "Brad" ]
 # then
