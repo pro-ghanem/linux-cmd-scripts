@@ -89,7 +89,7 @@ NAME="Bob"
 # -f file   True if the provided string is a file
 # -g file   True if the group id is set on a file
 # -r file   True if the file is readable
-# -s file   True if the file has a non-zero size
+# -s file   True if the file has a non-zero size(Empty)
 # -u    True if the user id is set on a file
 # -w    True if the file is writable
 # -x    True if the file is an executable
@@ -99,10 +99,19 @@ NAME="Bob"
 # read -p "Are you 21 or over? Y/N " ANSWER
 # case "$ANSWER" in 
 #   [yY] | [yY][eE][sS])
-#     echo "You can have a beer :)"
+#     echo "You can have a coffe :)"
 #     ;;
 #   [nN] | [nN][oO])
 #     echo "Sorry, no drinking"
+#     ;;
+#   1[0-15])
+#     echo "you typed a number between 0-9"
+#     ;;
+#   [0-9])
+#     echo "you typed a number between 0-9"
+#     ;;
+#   *".txt")
+#     echo "you typed a txt file"
 #     ;;
 #   *)
 #     echo "Please enter y/yes or n/no"
