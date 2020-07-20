@@ -15,10 +15,11 @@
 5- 
 while [ ... ];
 do 
-  for i in {} or dir/*
+  for i in {0..6} or dir/*
   do 
       if [ ... ]; then
-        
+        continue,break,sleep  
       fi
+      
   done
 done
