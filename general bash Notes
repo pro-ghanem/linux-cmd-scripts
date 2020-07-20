@@ -3,7 +3,7 @@
 2- to get any value of any variable don't forget $
 3- the diff between "" and '' : '' eliminate the $ and many of symbols form interjection in the statement and if '' don't effect for all, use "\"such as (\?|\!|\$)
   while the "" the effections of special carachters such as : $,!? and so on
-  4- any arithmatic operations must be under :((i+=2)), but if i want to get the the value of that operation u should use "$"; EX:
+4- any arithmatic operations must be under :((i+=2)), but if i want to get the the value of that operation u should use "$"; EX:
   
 # WHILE LOOP - READ THROUGH A FILE LINE BY LINE
 # LINE=1
@@ -12,3 +12,13 @@
 #     echo "$LINE: $CURRENT_LINE"
 #     ((LINE++))
 # done < "./new1.txt"
+5- 
+while [ ... ];
+do 
+  for i in {} or dir/*
+  do 
+      if [ ... ]; then
+        
+      fi
+  done
+done
