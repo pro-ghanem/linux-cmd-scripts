@@ -9,11 +9,14 @@ du /path/do/dir
 - grep: search for specific terms in a file
 #usage
 $ grep This file.txt 
-
+------------------------
+field based separator but has a problem, if u copy the datat and changed it process for the old data not the noew data that changed in the file (really misrable)
+$ cut -d ':' -f 2  /home/ghanem/test>> use ':' as a seperator and print the -f2  
+--------------------
 - awk and sed are text processors. Not only do they have the ability to find what you are looking for in text, they have the ability to remove, add and modify the text as well (and much more).
 awk is mostly used for data extraction and reporting; AWK differes from other text processors which using functions so it's really powerfull tool:
 $ awk '{print $1 " " $2}' /etc/passwd>> print what is collomn1 and collomn 2 sepereated by space
-$ awk -F ':' '{print $1 " " $2}'/etc/passwd >> using the ':' as a seperator for ex:   what in here is position$1:position$2:position3 
+$ awk -F ':' '{print $1 " " $2}'/etc/passwd >> using the ':' as a feild seperator for ex:   what in here is position$1:position$2:position3 (field based sperator such as cut command)
 $ grep -v ^#! /home/vagrant/myscript.sh  | awk '{print $1}' >> that commmand line used to get the ip address of apache accesslog
 
 ----------------
