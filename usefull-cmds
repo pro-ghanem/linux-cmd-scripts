@@ -20,6 +20,15 @@ $ awk -F ':' '{print $1 " " $2}'/etc/passwd >> using the ':' as a feild seperato
 $ grep -v ^#! /home/vagrant/myscript.sh  | awk '{print $1}' >> that commmand line used to get the ip address of apache accesslog
 
 ----------------
+>> sed perform text trandforamtions on streams:
+ex:
+- substitute some text for other text 
+- remove lines 
+- append text after given lines 
+- insert text before certain lines 
+***  Sed is used programmatocally, not interactively.
+
+
 $ sed -i 's/cat/dog/' file.txt
 # this will replace any occurrence of the characters 'cat' by 'dog'
 ----------------------------------------------------------------
