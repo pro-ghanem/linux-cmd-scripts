@@ -20,7 +20,7 @@ $ awk -F ':' '{print $1 " " $2}'/etc/passwd >> using the ':' as a feild seperato
 $ grep -v ^#! /home/vagrant/myscript.sh  | awk '{print $1}' >> that commmand line used to get the ip address of apache accesslog
 
 ----------------
->> sed perform text trandforamtions on streams:
+>> sed(Stream EDitor): perform text trandforamtions on streams or filtering and transforming text
 ex:
 - substitute some text for other text 
 - remove lines 
