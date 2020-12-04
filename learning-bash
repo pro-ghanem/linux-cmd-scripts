@@ -133,7 +133,8 @@ NAME="Bob"
 #     echo "Renaming $FILE to new-$FILE"
 #     mv $FILE $NEW-$FILE
 # done
-
+for i in `find . | grep '\.sh$'`; do echo $i; done
+for i in `find . -iname '*.sh'`; do echo $i; done
 # WHILE LOOP - READ THROUGH A FILE LINE BY LINE
 # LINE=1
 # while read -r CURRENT_LINE
