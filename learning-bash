@@ -125,6 +125,12 @@ NAME="Bob"
 #     echo "Hello $NAME"
 # done
 
+# incase of range of numbers
+for i in {1..10}; do
+	 ping 192.168.1.$i -c 1 
+	 echo ''
+done
+
 # FOR LOOP TO RENAME FILES
 # FILES=$(ls *.txt)
 # NEW="new"
