@@ -1,13 +1,10 @@
-# /bin/bash
+#! /bin/bash
 
-for i in * ; do 
- awk '!/creationTimestamp/' $i > ${i}.backup && ${i}.backup $i
- awk '!/selfLink/' $i > ${i}.backup && ${i}.backup $i
- awk '!/uid/' $i > ${i}.backup && ${i}.backup $i
- awk '!/revision/' $i > ${i}.backup && ${i}.backup $i
-
+for i in ~/Desktop/test/* ; do 
+sed -i 's/staging/prod/' $i
+ gawk -i inplace '!/uid/' $i
+ gawk -i inplace '!/creationTimestamp/' $i
 done
-
 
 
 
