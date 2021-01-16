@@ -1,5 +1,5 @@
 #!/bin/bash
-# i got 0 in the exam so this script didn't work as expected
+# i got 0 in the exam so this script didn't work as expected, so read the quesion very well
 for i in {9..1}; do
     if [[ -f access.log.${i} ]]; then
         mv -f access.log.${i} access.log.$((${i}+1))
