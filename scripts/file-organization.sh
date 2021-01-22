@@ -1,9 +1,28 @@
 #!/bin/bash
-for i in {1..10}; do
-    if [[ -f access.log.${i} ]]; then
-        mv -f access.log.${i} access.log.$((i+1))
-    fi
 
+folders='images music videos'
+ext_img="*.JPG *.png"
+ext_music="*.mp3 *.flac"
+ext_vid="*.avi *.mov"
+logs="*.log"
+for folder in $folders
+do
+
+	if [ $folder == 'images' ]
+	then
+		mkdir -p $folder
+		mv $ext_img $folder 2>/dev/null
+
+	elif [ $folder == 'music' ]
+	then
+		mkdir -p $folder
+		mv $ext_music $folder 2>/dev/null
+	
+	elif [ $folder == 'videos' ]
+	then
+		mkdir -p $folder
+		mv $ext_vid $folder 2>/dev/null
+
+	fi
+rm -fr *.log
 done
-mv -f access.log access.log.1
-touch access.log
