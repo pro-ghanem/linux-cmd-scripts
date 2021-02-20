@@ -167,3 +167,25 @@ for i in `find . -iname '*.sh'`; do echo $i; done
 # touch "hello/world.txt"
 # echo "Hello World" >> "hello/world.txt"
 # echo "Created hello/world.txt"
+
+# Arrays
+arr=(Hello World)
+arr[0]=Hello
+arr[1]=World
+${arr[*]}         # All of the items in the array
+${!arr[*]}        # All of the indexes in the array
+${#arr[*]}        # Number of items in the array(Length of items in the entire array) 
+${#arr[0]}        # Length of item zero
+
+# Example
+arr=(Hello World)
+n=0
+while (( n < ${#arr[*]} )); do
+    echo "${arr[n]}"
+    ((n++))
+done
+#will print
+```
+Hello
+World
+```
